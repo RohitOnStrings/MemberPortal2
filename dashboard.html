@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Guitar Strumming Dashboard</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 min-h-screen font-sans">
+
+  <!-- Top Header -->
+  <header class="bg-blue-600 text-white py-4 shadow-md">
+    <div class="container mx-auto flex justify-between items-center px-4">
+      <h1 class="text-2xl font-bold">🎸 Fretwork 101: The Fingering Tutorial</h1>
+      <button id="logoutBtn" class="bg-red-500 hover:bg-red-600 px-4 py-2 rounded text-sm font-semibold transition">
+        Logout
+      </button>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="container mx-auto px-4 py-8">
+    
+   <!-- Notification Banner -->
+<div class="bg-yellow-100 border-l-4 border-yellow-500 text-yellow-800 p-4 rounded mb-6 shadow-md">
+  <div class="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-2">
+    <div>
+      <p class="font-semibold">🎥 Next Live Session:</p>
+      <p class="text-sm">
+        <!-- <span class="font-medium">Date:</span> Sunday, June 9, 2025 |
+        <span class="font-medium">Time:</span> 6:00 PM IST -->
+
+        <span class="font-medium">Date – Awaited</span> |
+        <span class="font-medium">Time – Awaited</span> 
+      </p>
+    </div>
+
+    <!-- <a href="https://youtube.com/live/yourliveid" target="_blank" -->
+    <a href="https://www.youtube.com/c/GuitarCoverwithRohit" target="_blank"
+       class="inline-block mt-2 sm:mt-0 bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600 text-sm font-semibold transition">
+      🔴 Join Live on YouTube
+    </a>
+    
+  </div>
+</div>
+
+
+
+    <h2 class="text-xl font-semibold mb-6 text-center text-gray-800">Your Video Lessons</h2>
+    
+    <div class="grid gap-6 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+      <!-- Video Embeds -->
+      <iframe class="w-full aspect-video rounded shadow" src="https://www.youtube.com/embed/Hs-g5ZZnVwI?si=hEMGolhTxWFFbtCM" title="Lesson 1" frameborder="0" allowfullscreen></iframe>
+      <iframe class="w-full aspect-video rounded shadow" src="https://www.youtube.com/embed/VWFIZ4_6J70?si=mDxxxNIXXZkiyZw4" title="Lesson 2" frameborder="0" allowfullscreen></iframe>
+      <iframe class="w-full aspect-video rounded shadow" src="https://www.youtube.com/embed/M_YbUhuICMA?si=9IpdMWKAcj0CHY43" title="Lesson 3" frameborder="0" allowfullscreen></iframe>
+      <iframe class="w-full aspect-video rounded shadow" src="https://www.youtube.com/embed/pTVi0Rh9YJI?si=ORaMdefDwqMh3RNy" title="Lesson 4" frameborder="0" allowfullscreen></iframe>
+      <iframe class="w-full aspect-video rounded shadow" src="https://www.youtube.com/embed/GZngJlRz3Pk?si=sS5tpzksHoDYlvra" title="Lesson 5" frameborder="0" allowfullscreen></iframe>   
+    
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-white py-4 text-center text-sm">
+    © 2025 GuitarCoverWithRohit · Designed by Anurag Mathews (FlexMatty)
+  </footer>
+
+  <!-- Auth Script -->
+  <script>
+    if (sessionStorage.getItem('loggedIn') !== 'true') {
+      window.location.href = 'index.html';
+    }
+
+    document.getElementById('logoutBtn').addEventListener('click', () => {
+      sessionStorage.removeItem('loggedIn');
+      window.location.href = 'https://rohitonstrings.github.io/MemberPortal2/';
+    });
+  </script>
+</body>
+</html>
